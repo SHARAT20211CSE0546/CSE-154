@@ -1,160 +1,107 @@
-# CSE-154
-Here’s a sample `README.md` file for your Epicraft e-commerce project, covering all the essential sections:
+# Kalakriti - An E-Commerce for Artisans
 
----
+Welcome to the ShopKalakriti.live GitHub repository for the MERN e-commerce project! This repository contains the source code and assets for the ShopKalakriti.live website, built using the MERN stack.
 
-# Epicraft - E-commerce Platform for Artisans
+## Introduction
 
-Epicraft is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) e-commerce web application designed to promote and support the Indian handicraft industry. This platform enables artisans to showcase and sell their handmade products globally, with features for both users and admins such as product management, user authentication, and payment integration.
-
-## Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [API Endpoints](#api-endpoints)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
+KalaKriti is an online platform that showcases and sells handmade and unique art and craft products. It aims to provide a marketplace for talented artisans and craftsmen to showcase and sell their creations to a wider audience. The project is built using the MERN stack, which includes MongoDB, Express.js, React, and Node.js.
 
 ## Features
 
-- **User Registration & Login**: Sign up and login functionality for users, with secure password handling using JWT authentication.
-- **Product Management**: Users can view a list of products and their details. Admins can add, update, or delete products.
-- **Responsive Design**: Frontend built using React for a seamless and interactive user experience on all devices.
-- **Payment Gateway**: Planned integration with a payment gateway (Stripe/PayPal).
-- **Admin Dashboard**: For managing products and viewing sales statistics.
+- Browse and search for a wide variety of art and craft products.
+- View detailed product descriptions, images, and pricing information.
+- Add products to your shopping cart for easy purchasing.
+- Secure checkout process to complete your purchase.
+- User authentication and account management.
+- Manage your profile and view order history.
+- Contact form to get in touch with the KalaKriti team.
 
-## Tech Stack
+## Technologies Used
 
-### Frontend:
-- React.js
-- React Router for navigation
-- Axios for API calls
-- Bootstrap for UI styling
-
-### Backend:
-- Node.js and Express.js
-- MongoDB with Mongoose for database management
-- JWT for authentication
-- bcrypt for password hashing
+- **Frontend**: React, HTML, CSS, JavaScript
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Payment Gateway**: Stripe
 
 ## Installation
 
-Follow these steps to get the project up and running on your local machine.
+To run the KalaKriti MERN e-commerce project locally, follow these steps:
 
-### Prerequisites
-
-- Node.js (v14 or above)
-- MongoDB (local instance or cloud-based)
-
-### Setup Instructions
-
-1. **Clone the Repository:**
+1. Clone this repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/kalkerisharat/epicraft-ecommerce.git
-   cd epicraft-ecommerce
+   git clone https://github.com/shopkalakriti/shopkalakriti.live.git
    ```
 
-2. **Backend Setup:**
+2. Navigate to the project directory:
 
-   Navigate to the `backend` folder and install dependencies:
+   ```bash
+   cd shopkalakriti.live
+   ```
+
+3. Install the dependencies for the backend:
 
    ```bash
    cd backend
    npm install
    ```
 
-   Create a `.env` file in the `backend` directory with the following environment variables:
-
-   ```env
-   MONGO_URI=mongodb+srv://<your-mongo-db-uri>
-   JWT_SECRET=mySuperSecretKey
-   PORT=5000
-   ```
-
-   Run the backend server:
-
-   ```bash
-   npm start
-   ```
-
-3. **Frontend Setup:**
-
-   Navigate to the `frontend` folder and install dependencies:
+4. Install the dependencies for the frontend:
 
    ```bash
    cd ../frontend
    npm install
    ```
 
-   Run the frontend React app:
+5. Create a `.env` file in the root directory and set the following environment variables:
 
    ```bash
+   NODE_ENV=development
+   PORT=5000
+   MONGODB_URI=<your_mongodb_uri>
+   JWT_SECRET=<your_jwt_secret>
+   STRIPE_API_KEY=<your_stripe_api_key>
+   ```
+
+6. Run the backend server:
+
+   ```bash
+   cd backend
+   npm run dev
+   ```
+
+7. Run the frontend server:
+
+   ```bash
+   cd frontend
    npm start
    ```
 
-4. Open the application in your browser at `http://localhost:3000`.
+8. Open your browser and navigate to `http://localhost:3000` to view the application.
 
-## API Endpoints
+## Contributions
 
-Here are the key API endpoints for the backend:
+Contributions to the project are welcome! If you find a bug, have a feature request, or want to contribute code, please follow these steps:
 
-- `POST /api/users/signup`: User registration
-- `POST /api/users/login`: User login
-- `GET /api/products`: Fetch all products
-- `GET /api/products/:id`: Fetch product details
-- `POST /api/products`: Add a new product (admin only)
-- `PUT /api/products/:id`: Update product details (admin only)
-- `DELETE /api/products/:id`: Delete a product (admin only)
+1. Fork this repository to your GitHub account.
+2. Clone the forked repository to your local machine using the following command:
 
-## Usage
+   ```bash
+   git clone https://github.com/shopkalakriti/shopkalakriti.live.git
+   ```
 
-### User Features:
+3. Create a new branch using the following command:
 
-- **Browse Products**: Users can view a list of all available products and check detailed information for each one.
-- **User Authentication**: Sign up and login to gain access to user-specific features.
-- **Add Products to Cart**: Planned feature for users to add products to their cart for checkout.
-- **Checkout and Payment**: Planned integration with a payment gateway.
+   ```bash
+   git checkout -b new-branch-name
+   ```
 
-### Admin Features:
+4. Make your changes and commit them to your local repository.
 
-- **Product Management**: Admins can add, edit, and delete products from the inventory.
-- **Sales Dashboard**: Planned feature to view sales data and track performance.
+5. Push your changes to your forked repository:
 
-## Folder Structure
+   ```bash
+   git push origin new-branch-name
+   ```
 
-```
-├── backend
-│   ├── config
-│   ├── controllers
-│   ├── models
-│   ├── routes
-│   └── server.js
-├── frontend
-│   ├── public
-│   ├── src
-│   │   ├── api
-│   │   ├── components
-│   │   ├── pages
-│   │   └── App.js
-└── README.md
-```
-
-## Contributing
-
-Contributions are welcome! Please follow these steps to contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/new-feature`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature/new-feature`).
-5. Create a Pull Request.
-
-## License
-
-This project is licensed under the MIT License.
-
----
+6. Open a pull request for review.

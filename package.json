@@ -1,21 +1,33 @@
 {
-  "name": "epicraft",
+  "name": "kalakriti",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "कलाkriti is an e-commerce platform that seeks to improve the online market for small-town and rural handicrafts companies. By offering a shared platform for the production, marketing, and sale of high-quality handicrafts and products, this application seeks to promote the Indian handicraft industry globally.",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "kalakriti",
+  "license": "MIT",
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.1",
-    "express-validator": "^7.2.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.7.2"
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.11.97",
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.22"
   }
 }
