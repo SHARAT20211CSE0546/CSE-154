@@ -110,9 +110,10 @@ const OrderScreen = ({ match, history }) => {
                 {order.shippingAddress.postalCode},{' '}
                 {order.shippingAddress.country}
               </p>
-              {order.isDelivered ? (
+              {true ?  (
                 <Message variant="success">
-                  Delivered on {order.deliveredAt}
+                  Delivered Sucessfully 
+                  {/*Delivered on {order.deliveredAt}*/}
                 </Message>
               ) : (
                 <Message variant="danger">Not Delivered</Message>
@@ -125,11 +126,13 @@ const OrderScreen = ({ match, history }) => {
                 <strong>Method: </strong>
                 {order.paymentMethod}
               </p>
-              {order.isPaid ? (
+              {/* {order.isPaid ? (
                 <Message variant="success">Paid on {order.paidAt}</Message>
               ) : (
                 <Message variant="danger">Not Paid</Message>
-              )}
+              )} */}
+               <Message variant="success">Payment Sucessfull!</Message>
+
             </ListGroup.Item>
 
             <ListGroup.Item>
@@ -196,7 +199,7 @@ const OrderScreen = ({ match, history }) => {
                   <Col>&#8377;{order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
-              {!order.isPaid && (
+              {/* {!order.isPaid && (
                 <ListGroup.Item>
                   {loadingPay && <Loader />}
                   {!sdkReady ? (
@@ -227,7 +230,7 @@ const OrderScreen = ({ match, history }) => {
                       Mark As Delivered
                     </Button>
                   </ListGroup.Item>
-                )}
+                )} */}
             </ListGroup>
           </Card>
         </Col>
