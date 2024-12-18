@@ -87,7 +87,7 @@ Contributions to the project are welcome! If you find a bug, have a feature requ
 2. Clone the forked repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/shopkalakriti/shopkalakriti.live.git
+   git clone https://github.com//SHARAT20211CSE0546/CSE-154
    ```
 
 3. Create a new branch using the following command:
